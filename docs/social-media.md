@@ -220,6 +220,10 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 </Route>
 
+### 当前在线
+
+<Route author="TigerCubDen" example="/bilibili/online" path="/bilibili/online/:disableEmbed?" :paramsDesc="['默认为开启内嵌视频, 任意值为关闭']"/>
+
 ### 用户关注动态
 
 <Route author="TigerCubDen" example="/bilibili/followings/dynamic/109937383" path="/bilibili/followings/dynamic/:uid/:disableEmbed?" :paramsDesc="['用户 id', '默认为开启内嵌视频, 任意值为关闭']" selfhost="1">
@@ -1185,6 +1189,7 @@ rule
 | sizeOfAuthorAvatar         | 作者头像大小                            | 数字             | 48                              |
 | displayVideo               | 是否直接显示微博视频，只在博主或个人时间线 RSS 中有效     | 0/1/true/false | true                            |
 | displayArticle             | 是否直接显示微博文章，只在博主或个人时间线 RSS 中有效     | 0/1/true/false | false                           |
+| displayComments            | 是否直接显示热门评论，只在博主或个人时间线 RSS 中有效     | 0/1/true/false | false                           |
 | showEmojiInDescription     | 是否展示正文中的 emoji 表情                 | 0/1/true/false | true                            |
 
 指定更多与默认值不同的参数选项可以改善 RSS 的可读性，如
